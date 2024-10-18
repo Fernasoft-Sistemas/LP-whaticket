@@ -1,9 +1,24 @@
-import React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
-
-import icon from "../assets/icon.png";
+import React, { useState, useEffect } from "react";
+import { Box, Button, Stack } from "@mui/material";
+import logo from "../assets/logo_fernasoft_chat_verde.svg";
 
 const TopBar = ({ ContainedButton, ButtonTypography }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Quando a rolagem é maior que 50px, atualize o estado para indicar que a página foi rolada
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpar o eventListener quando o componente for desmontado
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Box
@@ -12,11 +27,13 @@ const TopBar = ({ ContainedButton, ButtonTypography }) => {
           fontStyle: "normal",
           fontSize: "20px",
           letterSpacing: "0.025em",
-          position: "sticky",
+          position: "fixed",
+          width: "100%",
           top: 0,
-          backgroundColor: "#fff",
+          backgroundColor: isScrolled ? "rgba(255, 255, 255, 0.8)" : "#fff",
           height: "90px",
           filter: "drop-shadow(11px 14px 17px rgba(37, 56, 92, 0.1))",
+          transition: "background-color 0.3s ease",
         }}
       >
         <Stack
@@ -31,29 +48,19 @@ const TopBar = ({ ContainedButton, ButtonTypography }) => {
           <Stack direction="row">
             <img
               style={{
-                width: 75,
-                height: 75,
+                width: 300,
+                height: "auto",
                 marginTop: "-5px",
               }}
-              src={icon}
+              src={logo}
               alt=""
             />
-
-            <Typography
-              sx={{ fontSize: "36px", fontFamily: "Mada", fontWeight: "400" }}
-            >
-              Wha
-            </Typography>
-            <Typography
-              sx={{ fontSize: "36px", fontFamily: "Mada", fontWeight: "700" }}
-            >
-              ticket
-            </Typography>
           </Stack>
 
           <Stack direction="row" spacing={2}>
             <Button
-              href="https://app.whaticket.com/login"
+              href="https://chat.fernasoft.com.br/login"
+              target="_blank"
               sx={{
                 borderRadius: "10px",
                 width: "100px",
@@ -67,9 +74,10 @@ const TopBar = ({ ContainedButton, ButtonTypography }) => {
             <ContainedButton
               variant="contained"
               color="primary"
-              href="https://app.whaticket.com/signup"
+              href="https://chat.fernasoft.com.br/signup"
+              target="_blank"
             >
-              <ButtonTypography>Contrate agora</ButtonTypography>
+              <ButtonTypography>Teste agora</ButtonTypography>
             </ContainedButton>
           </Stack>
         </Stack>

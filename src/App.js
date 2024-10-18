@@ -13,7 +13,7 @@ import Page from "./Page";
 import { styled } from "@mui/system";
 
 import { Facebook, Instagram, LinkedIn } from "@mui/icons-material";
-import whiteIcon from "./assets/whiteIcon.png";
+import logo from "./assets/logo_fernasoft_chat_branca.svg";
 
 const ContainedButton = styled(Button)({
   borderRadius: "10px",
@@ -29,8 +29,8 @@ const CardBox = styled(Box)({
   justifyContent: "center",
   width: "330px",
   height: "340px",
-  backgroundColor: "#F4C2C9",
-  borderRadius: "40px 40px 0px 0px",
+  backgroundColor: "#e2f1e1",
+  borderRadius: "40px 40px 40px 40px",
   filter: "drop-shadow(11px 14px 17px rgba(37, 56, 92, 0.29))",
 });
 
@@ -76,7 +76,7 @@ const FooterBottomWave = styled(Box)({
   position: "relative",
   height: "150px",
   width: "100%",
-  background: "#00ACC1",
+  background: "#60b55a",
 });
 
 const FooterTopWave = styled(Box)({
@@ -93,25 +93,20 @@ const FooterTopWave = styled(Box)({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#00ACC1",
+      main: "#60b55a",
       contrastText: "#FFFFFF",
-      darker: "#053e85",
     },
     success: {
       main: "#4783F0",
-      darker: "#053e85",
     },
     warning: {
-      main: "#00ACC1",
-      darker: "#053e85",
+      main: "#60b55a",
     },
     danger: {
       main: "#25385C",
-      darker: "#053e85",
     },
     secondary: {
       main: "#121212",
-      darker: "#053e85",
     },
   },
 });
@@ -155,30 +150,15 @@ function App() {
               }}
             >
               <Stack direction="row">
-                <img style={{ width: 75, height: 75 }} src={whiteIcon} alt="" />
-
-                <Typography
-                  sx={{
-                    zIndex: 2000,
-
-                    fontSize: "36px",
-                    fontFamily: "Mada",
-                    fontWeight: "400",
-                    marginTop: "15px",
-                  }}
-                >
-                  Wha
-                </Typography>
-                <Typography
-                  sx={{
-                    fontSize: "36px",
-                    fontFamily: "Mada",
-                    fontWeight: "700",
-                    marginTop: "15px",
-                  }}
-                >
-                  ticket
-                </Typography>
+              <img
+              style={{
+                width: 300,
+                height: "auto",
+                marginTop: "-5px",
+              }}
+              src={logo}
+              alt=""
+            />
               </Stack>
               <TextTypography
                 sx={{
@@ -188,17 +168,17 @@ function App() {
                   position: "absolute",
                 }}
               >
-                Feito com ♥ por Whaticket
+                By Fernacom Informática © 2024
               </TextTypography>
 
               <Stack direction="row" spacing={2}>
-                <IconButton disabled sx={{ color: "#fff" }}>
+                <IconButton href="https://www.facebook.com/fernacominformatica" target="_blank" sx={{ color: "#fff" }}>
                   <Facebook />
                 </IconButton>
-                <IconButton disabled sx={{ color: "#fff" }}>
+                <IconButton href="https://www.instagram.com/fernacominformatica/" target="_blank" sx={{ color: "#fff" }}>
                   <Instagram />
                 </IconButton>
-                <IconButton disabled sx={{ color: "#fff" }}>
+                <IconButton href="https://www.linkedin.com/in/fernacom-inform%C3%A1tica-28672b269/" target="_blank" sx={{ color: "#fff" }}>
                   <LinkedIn />
                 </IconButton>
               </Stack>

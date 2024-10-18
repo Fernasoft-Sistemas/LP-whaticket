@@ -1,7 +1,6 @@
 import { Grid, Stack } from "@mui/material";
 import React from "react";
-
-import image2 from "../assets/image2.png";
+import visual from "../assets/visual.svg";
 
 const FriendlyInterface = ({ SubtitleTypography, TextTypography }) => {
   return (
@@ -19,7 +18,7 @@ const FriendlyInterface = ({ SubtitleTypography, TextTypography }) => {
           </SubtitleTypography>
           <TextTypography>
             A interface simples faz com que sua equipe sinta-se à vontade para
-            realizar os atendimentos com seus clientes. O Whaticket promove
+            realizar os atendimentos com seus clientes. O Fernasot Chat promove
             solução de problemas, ótima experiência dos usuários, agregando
             valor ao seu negócio!
           </TextTypography>
@@ -40,7 +39,7 @@ const FriendlyInterface = ({ SubtitleTypography, TextTypography }) => {
           marginRight: "auto",
         }}
       >
-        <img src={image2} alt="" />
+        <img src={visual} width={500} alt="" />
       </Grid>
     </Grid>
   );

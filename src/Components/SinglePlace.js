@@ -1,51 +1,23 @@
-import { Grid, Stack } from "@mui/material";
-import Box from "@mui/material/Box";
 import React from "react";
+import Box from "@mui/material/Box";
+import { Grid, Stack } from "@mui/material";
 
-const SinglePlace = ({ SubtitleTypography, TextTypography }) => {
+const SinglePlace = ({ SubtitleTypography, TextTypography, ContainedButton, ButtonTypography, }) => {
   return (
     <Grid container spacing={2}>
-      <Grid item lg={6} md={12} xs={12} sx={{ paddingBottom: "100px" }}>
+      <Grid item lg={12} md={12} xs={12} sx={{ paddingBottom: "100px" }}>
         <Box
           sx={{
-            display: "flex",
-            paddingRight: "78px",
-
-            maxWidth: "666px",
-
-            letterSpacing: "0.025em",
-            color: "#302F2F",
-            marginLeft: "auto",
-            marginRight: "auto",
+            flexDirection: "column",
+            maxWidth: "1000px",
+            margin: "0 auto",
+            textAlign: "center",
           }}
         >
           <Stack direction="column" spacing={2}>
-            <SubtitleTypography>Tudo em um único lugar</SubtitleTypography>
-
-            <TextTypography>
-              Tenha todos os departamentos da sua empresa organizados em um
-              único painel. Não perca nenhum atendimento por falta de
-              organização e separe os atendimentos automaticamente com a ajuda
-              do nosso Chatbot.
-            </TextTypography>
+            <SubtitleTypography>Transforme cada interação em uma oportunidade com o Fernasoft Chat!</SubtitleTypography>
           </Stack>
         </Box>
-      </Grid>
-      <Grid item lg={6} md={12} xs={12} sx={{ paddingBottom: "100px" }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            paddingRight: "78px",
-            maxWidth: "484px",
-            height: "165px",
-            marginLeft: "auto",
-            marginRight: "auto",
-
-            backgroundColor: "#FFE7797D",
-            borderRadius: "82px 0px 0px 0px",
-          }}
-        ></Box>
       </Grid>
     </Grid>
   );

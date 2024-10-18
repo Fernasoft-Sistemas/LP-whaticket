@@ -1,10 +1,12 @@
 import { Grid, Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import React from "react";
-
-import multipleUsers from "../assets/multipleUsers.png";
-import fastResponses from "../assets/fastResponses.png";
-import reports from "../assets/reports.png";
+import TeamPana from "../assets/Teampana.svg";
+import response from "../assets/response.svg";
+import ViewAgendaOutlined from '@mui/icons-material/ViewAgendaOutlined';
+import EventAvailableOutlined from '@mui/icons-material/EventAvailableOutlined';
+import LabelOutlined from '@mui/icons-material/LabelOutlined';
+import reports from "../assets/reports.svg";
 
 import {
   AccountTreeOutlined,
@@ -23,14 +25,14 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
             justifyContent: "center",
           }}
         >
-          <img src={multipleUsers} alt="" />
+          <img src={TeamPana} width={415} alt="" />
         </Box>
 
         <Stack direction="column" spacing={2}>
           <CardSubtitleTypography>Multiplos atendentes</CardSubtitleTypography>
 
           <TextTypography sx={{ textAlign: "center" }}>
-            Cadastre toda a sua equipe no Whaticket. Cada atendente recebe o
+            Cadastre toda a sua equipe no Fersnasoft. Cada atendente recebe o
             atendimento de forma organizada, e você pode acompanhar todos eles
             em tempo real.
           </TextTypography>
@@ -44,7 +46,7 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
             justifyContent: "center",
           }}
         >
-          <img src={fastResponses} alt="" />
+          <img src={response} width={275} alt="" />
         </Box>
         <Stack direction="column" spacing={2}>
           <CardSubtitleTypography>Respostas rápidas</CardSubtitleTypography>
@@ -63,7 +65,7 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
             justifyContent: "center",
           }}
         >
-          <img src={reports} alt="" />
+          <img src={reports} width={275} alt="" />
         </Box>
         <Stack direction="column" spacing={2}>
           <CardSubtitleTypography>
@@ -87,15 +89,20 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
       >
         <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
           <Stack
-            sx={{ marginLeft: "auto", marginRight: "auto", width: "250px" }}
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              alignItems: "flex-start", // Alinha o conteúdo ao topo
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
             direction="column"
             spacing={2}
           >
             <CardSubtitleTypography>
-              <AccountTreeOutlined
-                color="primary"
-                fontSize="large"
-              ></AccountTreeOutlined>
+              <AccountTreeOutlined color="primary" fontSize="large"></AccountTreeOutlined>
               Separação de departamentos
             </CardSubtitleTypography>
 
@@ -106,6 +113,7 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
           </Stack>
         </CardBox>
       </Grid>
+
       <Grid
         item
         sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}
@@ -115,7 +123,15 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
       >
         <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
           <Stack
-            sx={{ marginLeft: "auto", marginRight: "auto", width: "250px" }}
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              alignItems: "flex-start", // Alinha o conteúdo ao topo
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
             direction="column"
             spacing={2}
           >
@@ -125,13 +141,14 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
             </CardSubtitleTypography>
 
             <TextTypography sx={{ textAlign: "center" }}>
-              Todas as mensagens enviadas pelo Whaticket levam o nome do
+              Todas as mensagens enviadas pelo Fernasoft Chat levam o nome do
               atendente antes do texto. Assim o seu cliente sempre sabe com quem
               está falando.
             </TextTypography>
           </Stack>
         </CardBox>
       </Grid>
+
       <Grid
         item
         sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}
@@ -141,7 +158,15 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
       >
         <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
           <Stack
-            sx={{ marginLeft: "auto", marginRight: "auto", width: "250px" }}
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              alignItems: "flex-start", // Alinha o conteúdo ao topo
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
             direction="column"
             spacing={2}
           >
@@ -162,19 +187,113 @@ const Cards = ({ CardSubtitleTypography, TextTypography, CardBox }) => {
       <Box
         sx={{
           zIndex: "10",
-
-          marginLeft: "80px",
-          marginRight: "-100px",
-
+          marginLeft: "-10px",
+          marginRight: "-80px",
           width: "90vw",
           height: "138px",
-          marginTop: "-80px",
-
-          backgroundColor: "#6DAFA7DE",
-
-          borderRadius: "0px 82px 0px 0px",
+          marginTop: "-50px",
+          backgroundColor: "#203f1d",
+          borderRadius: "82px 82px 82px 82px",
         }}
       ></Box>
+
+      <Grid
+        item
+        sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto", marginTop: "-130px" }}
+        lg={4}
+        md={6}
+        xs={12}
+      >
+        <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
+          <Stack
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
+            direction="column"
+            spacing={2}
+          >
+            <CardSubtitleTypography>
+              <ViewAgendaOutlined color="primary" fontSize="large"></ViewAgendaOutlined>
+              Kanban
+            </CardSubtitleTypography>
+
+            <TextTypography sx={{ textAlign: "center" }}>
+              Organize suas tarefas e acompanhe o andamento dos processos utilizando quadros Kanban.
+            </TextTypography>
+          </Stack>
+        </CardBox>
+      </Grid>
+
+      <Grid
+        item
+        sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto", marginTop: "-130px" }}
+        lg={4}
+        md={6}
+        xs={12}
+      >
+        <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
+          <Stack
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              alignItems: "center", // Alinha o conteúdo ao topo
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
+            direction="column"
+            spacing={2}
+          >
+            <CardSubtitleTypography>
+              <EventAvailableOutlined color="primary" fontSize="large"></EventAvailableOutlined>
+              Agendamento
+            </CardSubtitleTypography>
+
+            <TextTypography sx={{ textAlign: "center" }}>
+              Agende reuniões, atendimentos ou qualquer evento diretamente pelo sistema, garantindo uma organização eficiente.
+            </TextTypography>
+          </Stack>
+        </CardBox>
+      </Grid>
+
+      <Grid
+        item
+        sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto", marginTop: "-130px" }}
+        lg={4}
+        md={6}
+        xs={12}
+      >
+        <CardBox sx={{ zIndex: "30", marginLeft: "auto", marginRight: "auto" }}>
+          <Stack
+            sx={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "20px",
+              width: "250px",
+              justifyContent: "flex-start", // Alinha ao topo verticalmente
+              height: "100%", // Garante que o card ocupe a altura total
+            }}
+            direction="column"
+            spacing={2}
+          >
+            <CardSubtitleTypography>
+              <LabelOutlined color="primary" fontSize="large"></LabelOutlined>
+              Tags
+            </CardSubtitleTypography>
+
+            <TextTypography sx={{ textAlign: "center" }}>
+              Utilize tags personalizadas para categorizar e organizar atendimentos de forma rápida e eficaz.
+            </TextTypography>
+          </Stack>
+        </CardBox>
+      </Grid>
+
     </Grid>
   );
 };

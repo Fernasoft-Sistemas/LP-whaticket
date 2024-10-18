@@ -4,7 +4,8 @@ import Box from "@mui/material/Box";
 
 const PlansText = ({ TextTypography }) => {
   return (
-    <Stack direction="column">
+    <Stack direction="column" id="target-plans"
+    >
       <Box
         sx={{
           letterSpacing: "0.025em",
@@ -36,8 +37,7 @@ const PlansText = ({ TextTypography }) => {
             paddingBottom: "50px",
           }}
         >
-          Crie um plano personalizado de acordo com a sua necessidade. Todos os
-          recursos estão disponíveis em todos os planos. Não importa o tamanho
+          Crie um plano personalizado de acordo com a sua necessidade, ou experimente por 3 dias a plataforma com recursos limitados. Não importa o tamanho
           da sua empresa, estamos aqui para te ajudar a modernizar o seu
           atendimento.
         </TextTypography>{" "}

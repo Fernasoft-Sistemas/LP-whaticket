@@ -4,7 +4,8 @@ import React from "react";
 
 const Outro = ({ TextTypography, ContainedButton, ButtonTypography }) => {
   return (
-    <Grid sx={{ paddingBottom: "100px" }}>
+    <Grid container justifyContent="center"
+    sx={{ paddingBottom: "100px" }}>
       <Stack direction="column" spacing={4}>
         <Box
           sx={{
@@ -28,7 +29,7 @@ const Outro = ({ TextTypography, ContainedButton, ButtonTypography }) => {
               filter: "drop-shadow(11px 14px 17px rgba(37, 56, 92, 0.29))",
             }}
           >
-            Conheça o Whaticket
+            Conheça o FernaSoft Chat
           </Typography>
           <TextTypography
             sx={{
@@ -41,14 +42,15 @@ const Outro = ({ TextTypography, ContainedButton, ButtonTypography }) => {
               alignItems: "center",
             }}
           >
-            Cadastre-se gratuitamente e experimente 3 dias do Whaticket. Tenha
+            Cadastre-se gratuitamente e experimente 3 dias do Fernasoft Chat. Tenha
             acesso a plataforma exclusiva. Aproveite!
           </TextTypography>
 
           <ContainedButton
             variant="contained"
             color="primary"
-            href="https://app.whaticket.com/signup"
+            href="https://chat.fernasoft.com.br/signup"
+            target="_blank"
           >
             <ButtonTypography>Teste agora</ButtonTypography>
           </ContainedButton>

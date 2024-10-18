@@ -28,6 +28,8 @@ const Page = ({
       <SinglePlace
         SubtitleTypography={SubtitleTypography}
         TextTypography={TextTypography}
+        ContainedButton={ContainedButton}
+        ButtonTypography={ButtonTypography}
       />
       <Cards
         CardSubtitleTypography={CardSubtitleTypography}
@@ -38,7 +40,10 @@ const Page = ({
         SubtitleTypography={SubtitleTypography}
         TextTypography={TextTypography}
       />
-      <WhaticketPrintScreen />
+      <WhaticketPrintScreen 
+      SubtitleTypography={SubtitleTypography}
+      />
+      
       <PlansText TextTypography={TextTypography} />
       <Prices
         TextTypography={TextTypography}
